@@ -1,0 +1,51 @@
+{
+  "name": "whasync-cli",
+  "version": "0.0.1",
+  "description": "Sync WhatsApp profile photos to Google Contacts from the terminal",
+  "type": "module",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ShaunLWM/whatsync-cli.git"
+  },
+  "homepage": "https://github.com/ShaunLWM/whatsync-cli",
+  "bugs": {
+    "url": "https://github.com/ShaunLWM/whatsync-cli/issues"
+  },
+  "keywords": [
+    "whatsapp",
+    "google-contacts",
+    "photo-sync",
+    "cli"
+  ],
+  "bin": {
+    "whasync": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node --import tsx src/index.ts",
+    "dev": "node --watch --import tsx src/index.ts"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^13.0.0",
+    "googleapis": "^148.0.0",
+    "libphonenumber-js": "^1.12.0",
+    "open": "^10.1.0",
+    "qrcode": "^1.5.4",
+    "whatsapp-web.js": "^1.26.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/qrcode": "^1.5.6",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
